@@ -1,16 +1,5 @@
 <?php
 
-/* Torrent-Cache
- * ===================================================================================
- * "THE BEER-&-COFFEE-WARE LICENSE" [ Revision 0 ]:
- * - Variation of the "BEER-WARE LICENSE" Rev 42.
- * <xan . manning at gmail.com> wrote this file. As long as you retain this notice 
- * you can do whatever you want with this stuff. If we meet some day, and you think
- * this stuff is worth it, you can buy me a beer or coffee in return. Xan Manning
- * ===================================================================================
- */
-
-
 // Torrent storage folder
 $CONFIG['torrent_folder'] = "t";
 # $CONFIG['torrent_folder'] = substr(md5($_SERVER['SERVER_ADDR'])), 0, 5); // Good to keep secure!
@@ -664,6 +653,8 @@ switch($requri)
 
 								if(!is_numeric($CONFIG['torrent_id_length']) || (int)$CONFIG['torrent_id_length'] < 0)
 									$CONFIG['torrent_id_length'] = 1;
+								if($CONFIG['torrent_id_length'] > 32)
+									$CONFIG['torrent_id_length'] = 32;
 
 								$token = $torrent->token(TRUE, TRUE);
 								$data = $torrent->serializer(array($CONFIG['torrent_id_length']));
