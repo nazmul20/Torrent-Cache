@@ -1,13 +1,13 @@
 <?php
 
-/* Torrent-Cache
- * ===================================================================================
+/* Torrent-Cache	v1.0.0
+ * ============================================================================
  * "THE BEER-&-COFFEE-WARE LICENSE" [ Revision 0 ]:
  * - Variation of the "BEER-WARE LICENSE" Rev 42.
  * <xan . manning at gmail.com> wrote this file. As long as you retain this notice 
  * you can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer or coffee in return. Xan Manning	 	
- * ===================================================================================
+ * ============================================================================
  */
 
 // Torrent storage folder

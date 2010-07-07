@@ -1,16 +1,16 @@
 /*
- *	Torrent-Cache		 v 1.0
- * ===================================================================================
+ *	Torrent-Cache		 v 1.0.0
+ * ============================================================================
  *	
  *	Written by Xan Manning (http://xan-manning.co.uk)
  *
- * ===================================================================================
+ * ============================================================================
  * "THE BEER-&-COFFEE-WARE LICENSE" [ Revision 0 ]:
  * - Variation of the "BEER-WARE LICENSE" Rev 42.
  * <xan . manning at gmail.com> wrote this file. As long as you retain this notice 
  * you can do whatever you want with this stuff. If we meet some day, and you think
  * this stuff is worth it, you can buy me a beer or coffee in return. Xan Manning
- * ===================================================================================
+ * ============================================================================
  *
  *	Very simple, very small and quick, autonomous Torrent Cache. 
  *	Includes a simple API, written as an alternative to Torrage.
@@ -19,39 +19,39 @@
 
 
 DISCLAIMER
---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 	
-	This script was written for the purposes of distributing legal .torrent files.
-	Having said that I will not be held responsible for the content that does get
-	uploaded via this script, it was never my intention to ever aid in piracy,
-	merely provide a service to store .torrent files.
+This script was written for the purposes of distributing legal .torrent files.
+Having said that I will not be held responsible for the content that does get
+uploaded via this script, it was never my intention to ever aid in piracy,
+merely provide a service to store .torrent files.
 
-	BitTorrent protocol is not illegal in itself, it is used by individuals to
-	share and collaborate large files amongst one another and distribute their
-	own content to the world. A number of examples of this happening are in the
-	Linux community; Ubuntu, Debian, Fedora - all of which and many more available
-	for download via BitTorrent.
+BitTorrent protocol is not illegal in itself, it is used by individuals to
+share and collaborate large files amongst one another and distribute their
+own content to the world. A number of examples of this happening are in the
+Linux community; Ubuntu, Debian, Fedora - all of which and many more available
+for download via BitTorrent.
 
-	Please don't label me a pirate!
+Please don't label me a pirate!
 
 
 
 AUTHORS
---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
-	+	Xan Manning			(xan[dot]manning[at]gmail[dot]com)
+	+ Xan Manning			(xan[dot]manning[at]gmail[dot]com)
 
 
 
 
 
 INSTALLATION
---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
-	1.	Change the $CONFIG variables in index.php
-	2.	Upload to your server
-	3.	CHMOD the containing folder to 0777.
-	4.	Visit http://yoursite/path/to/cache/index.php
-	5.	Watch it install.
-	6.	CHMOD the containing folder to 0755.
-	7. 	Done.
+	1. Change the $CONFIG variables in index.php
+	2. Upload to your server
+	3. CHMOD the containing folder to 0777.
+	4. Visit http://yoursite/path/to/cache/index.php
+	5. Watch it install.
+	6. CHMOD the containing folder to 0755.
+	7. Done.
