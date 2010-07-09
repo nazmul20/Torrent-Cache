@@ -349,6 +349,24 @@ class torrent
 					return false;
 			}
 
+		public function decompressFile($file)
+			{
+				/* http://php.net/manual/en/function.gzdecode.php */
+				$g = tempnam('/tmp','gzip-php');
+				@file_put_contents($g, $file);
+				ob_start();
+				readgzfile($g);
+				$d = ob_get_clean();
+				return $d;
+			}
+
+		public function decompressedSize($content)
+			{
+				$g = tempnam('/tmp','gzip-php-decompressed');
+				@file_put_contents($g, $content);
+				return filesize($g);
+			}
+
 		public function checkFileNoExpire($file)
 			{
 				if(!$this->config['torrent_expire'])
@@ -804,8 +822,17 @@ switch($requri)
 			header("Content-Type: application/x-bittorrent");
 			header("Content-Disposition: attachment; filename=" . strtoupper(sha1(md5($file_ID . ".torrent"))) . ".torrent");
 			header("Content-Transfer-Encoding: binary");
-			$output = file_get_contents($file);
-			header("Content-Length: " . filesize($file));
+
+			if($CONFIG['torrent_gzip'])
+				{
+					$output = $torrent->decompressFile(file_get_contents($file));
+					header("Content-Length: " . $torrent->decompressedSize($output));
+				}
+			else
+				{
+					$output = file_get_contents($file);
+					header("Content-Length: " . filesize($file));
+				}
 
 			echo $output;
 
