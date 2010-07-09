@@ -1,6 +1,6 @@
 <?php
 
-/* Torrent-Cache	v1.0.0
+/* Torrent-Cache	v1.0.1
  * ============================================================================
  * "THE BEER-&-COFFEE-WARE LICENSE" [ Revision 0 ]:
  * - Variation of the "BEER-WARE LICENSE" Rev 42.
@@ -347,24 +347,6 @@ class torrent
 					}
 				else
 					return false;
-			}
-
-		public function decompressFile($file)
-			{
-				/* http://php.net/manual/en/function.gzdecode.php */
-				$g = tempnam('/tmp','gzip-php');
-				@file_put_contents($g, $file);
-				ob_start();
-				readgzfile($g);
-				$d = ob_get_clean();
-				return $d;
-			}
-
-		public function decompressedSize($content)
-			{
-				$g = tempnam('/tmp','gzip-php-decompressed');
-				@file_put_contents($g, $content);
-				return filesize($g);
 			}
 
 		public function checkFileNoExpire($file)
@@ -822,17 +804,8 @@ switch($requri)
 			header("Content-Type: application/x-bittorrent");
 			header("Content-Disposition: attachment; filename=" . strtoupper(sha1(md5($file_ID . ".torrent"))) . ".torrent");
 			header("Content-Transfer-Encoding: binary");
-
-			if($CONFIG['torrent_gzip'])
-				{
-					$output = $torrent->decompressFile(file_get_contents($file));
-					header("Content-Length: " . $torrent->decompressedSize($output));
-				}
-			else
-				{
-					$output = file_get_contents($file);
-					header("Content-Length: " . filesize($file));
-				}
+			$output = file_get_contents($file);
+			header("Content-Length: " . filesize($file));
 
 			echo $output;
 
