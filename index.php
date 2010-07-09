@@ -1,6 +1,6 @@
 <?php
 
-/* Torrent-Cache	v1.0.1
+/* Torrent-Cache	v1.0.2
  * ============================================================================
  * "THE BEER-&-COFFEE-WARE LICENSE" [ Revision 0 ]:
  * - Variation of the "BEER-WARE LICENSE" Rev 42.
