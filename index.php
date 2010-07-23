@@ -574,10 +574,10 @@ $torrent = new torrent($CONFIG);
 if($requri == "install" || $requri == "")
 	{
 ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html> 
+<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
 		<title><?php echo $torrent->setTitle($CONFIG['torrent_name']); ?> &raquo; <?php echo $torrent->titleID($requri); ?></title>
 		<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
 		<link rel="icon" type="image/png" href="favicon.png" />
@@ -586,19 +586,6 @@ if($requri == "install" || $requri == "")
 		<meta name="Keywords" content="short url torrent file host gzip" />
 		<meta name="Robots" content="<?php echo $torrent->robotPrivacy($requri); ?>" /> 
 		<meta name="Author" content="RedBeard" />
-		<script type="text/javascript">
-			function submitTorrent(targetButton) {
-				var disabledButton = document.createElement('input');
-				var parentContainer = document.getElementById('submitContainer');
-				disabledButton.setAttribute('value', 'Uploading...');
-				disabledButton.setAttribute('type', 'button');
-				disabledButton.setAttribute('disabled', 'disabled');
-				disabledButton.setAttribute('id', 'dummyPost');
-				targetButton.style.display = "none";
-				parentContainer.appendChild(disabledButton);
-				return true;
-			}
-		</script>
 		<?php
 		if($torrent->styleSheet())
 				echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"" . $CONFIG['torrent_style'] . "\" media=\"screen\" />";
@@ -622,7 +609,19 @@ if($requri == "install" || $requri == "")
 			}
 		?>
 
-
+		<script type="text/javascript">
+			function submitTorrent(targetButton) {
+				var disabledButton = document.createElement('input');
+				var parentContainer = document.getElementById('submitContainer');
+				disabledButton.setAttribute('value', 'Uploading...');
+				disabledButton.setAttribute('type', 'button');
+				disabledButton.setAttribute('disabled', 'disabled');
+				disabledButton.setAttribute('id', 'dummyPost');
+				targetButton.style.display = "none";
+				parentContainer.appendChild(disabledButton);
+				return true;
+			}
+		</script>
 	</head>
 	<body>
 		<div id="site">
