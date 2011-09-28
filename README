@@ -48,10 +48,22 @@ AUTHORS
 INSTALLATION
 -------------------------------------------------------------------------------
 
-	1. Change the $CONFIG variables in index.php
-	2. Upload to your server
-	3. CHMOD the containing folder to 0777.
-	4. Visit http://yoursite/path/to/cache/index.php
-	5. Watch it install.
-	6. CHMOD the containing folder to 0755.
-	7. Done.
+	1. Copy index.php.dist to index.php
+	2. Change the $CONFIG variables in index.php
+	3. Upload to your server
+	4. CHMOD the containing folder to 0777.
+	5. Visit http://yoursite/path/to/cache/index.php
+	6. Watch it install.
+	7. CHMOD the containing folder to 0755.
+	8. Done.
+
+
+TIPS AND TRICKS
+-------------------------------------------------------------------------------
+
+	1. Better protect users privacy by setting your server access and 
+	   error logs to /dev/null
+	2. Enabling GZip helps keep storage requirements lower
+	3. Using mod_rewrite (or equivalent) makes this script more useful
+	4. Only allow API usage if you understand the risk that files
+	   being uploaded to your server may be illegal.
