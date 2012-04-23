@@ -15,6 +15,8 @@ Very simple, very small and quick, autonomous Torrent Cache. Includes a simple A
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=xan.manning&url=https://github.com/xanmanning/Torrent-Cache&title=Torrent-Cache&language=&tags=github&category=software) 
 
+**BITCOIN DONATIONS**
+ * 1BFhtdVYmtAuYostpZLDAiGt1dmJaHTRDW
 
 DISCLAIMER
 ----------
